@@ -40,4 +40,33 @@ public class CashbackHackServiceTest {
         Assert.assertEquals(expected,actual);
     }
 
+    @org.junit.jupiter.api.Test
+    public void JUnit5remainTest(){
+        CashbackHackService service = new CashbackHackService();
+
+        int expected = 100;
+        int actual = service.remain(900);
+
+        Assert.assertEquals(expected,actual);
+    }
+
+    @org.junit.jupiter.api.Test
+    public void JUnit5remainTest2(){
+        CashbackHackService service = new CashbackHackService();
+
+        int expected = 0;
+        int actual = service.remain(1000);
+
+        Assert.assertEquals(expected,actual);
+    }
+
+    @org.junit.jupiter.api.Test
+    public void JUnit5remainTest3(){
+        CashbackHackService service = new CashbackHackService();
+
+        int expected = 900;
+        int actual = service.remain(1100);
+
+        Assert.assertEquals(expected,actual);
+    }
 }
